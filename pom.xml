@@ -61,11 +61,11 @@
 	    </dependency>
 	    
 	    <!-- 我自己的工具包 -->
-	    <dependency>
+	    <!-- <dependency>
 			<groupId>jianhe</groupId>
 			<artifactId>jianheutils</artifactId>
 			<version>1.0</version>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<build>
