@@ -28,7 +28,6 @@ public class LoginInterceptor extends HandlerInterceptorAdapter
 		//需要验证登录
 		if(require!=null&&require.value())
 		{
-			System.out.println("拦截");
 			HttpSession session=request.getSession();
 			User user=(User) session.getAttribute("user");
 			if(user==null)
@@ -38,7 +37,6 @@ public class LoginInterceptor extends HandlerInterceptorAdapter
 			}
 			return true;
 		}
-		System.out.println("放行");
 		return true;
 	}
 }
