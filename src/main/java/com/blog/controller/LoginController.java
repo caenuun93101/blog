@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.blog.common.annotation.RequireLogin;
 import com.blog.entity.User;
@@ -13,7 +14,16 @@ import com.blog.entity.User;
 public class LoginController
 {
 	@RequestMapping("/login")
-	public User login(HttpServletRequest request, HttpServletResponse response)
+	public ModelAndView login(HttpServletRequest request, HttpServletResponse response)
+	{
+		ModelAndView mav=new ModelAndView("login/login");
+		
+		return mav;
+	}
+	
+	@RequireLogin
+	@RequestMapping("/logout")
+	public void loginOut(HttpServletRequest request, HttpServletResponse response)
 	{
 		User user=new User();
 		user.setId(1);
@@ -22,13 +32,6 @@ public class LoginController
 		user.setPwd("123");
 		user.setSign("sign");
 		user.setUid("uid");
-		return user;
-	}
-	
-	@RequireLogin
-	@RequestMapping("/loginout")
-	public void loginOut(HttpServletRequest request, HttpServletResponse response)
-	{
 		
 	}
 }
