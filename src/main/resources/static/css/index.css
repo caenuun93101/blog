@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.left-div {
+	width: 300px;
+	outline: red solid 1px;
+	float: left;
+}
+
+.center-div {
+
+}
+
+.right-div {
+	
+}
